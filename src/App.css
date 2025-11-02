@@ -1,0 +1,25 @@
+.App {
+  min-height: 100vh;
+  filter: none;
+  -webkit-filter: none;
+  position: relative;
+  z-index: 1;
+}
+
+/* Smooth scroll animations */
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  filter: none;
+  -webkit-filter: none;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 60px 15px;
+  }
+}
+

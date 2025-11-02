@@ -1,0 +1,173 @@
+.experience {
+  padding: 120px 20px;
+  background: var(--dark-bg);
+}
+
+.experience-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+  padding-left: 40px;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: -40px;
+  top: 0;
+}
+
+.timeline-icon {
+  width: 50px;
+  height: 50px;
+  background: var(--gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 25px;
+  top: 50px;
+  width: 2px;
+  height: calc(100% + 60px);
+  background: var(--gradient);
+  opacity: 0.3;
+}
+
+.timeline-item:last-child .timeline-line {
+  display: none;
+}
+
+.timeline-content {
+  background: var(--dark-secondary);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+  border-color: var(--primary-color);
+  transform: translateX(10px);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+}
+
+.timeline-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.timeline-header h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.timeline-period {
+  font-size: 0.9rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  background: rgba(99, 102, 241, 0.1);
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.timeline-company {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.timeline-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+}
+
+.timeline-achievements {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.timeline-achievements li {
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  background: rgba(99, 102, 241, 0.1);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 5px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.timeline-item.experience .timeline-icon {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.timeline-item.education .timeline-icon {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+}
+
+.timeline-item.certification .timeline-icon {
+  background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 30px;
+  }
+
+  .timeline-item {
+    padding-left: 30px;
+  }
+
+  .timeline-marker {
+    left: -30px;
+  }
+
+  .timeline-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+  }
+
+  .timeline-content {
+    padding: 20px;
+  }
+
+  .timeline-header h3 {
+    font-size: 1.3rem;
+  }
+}
+

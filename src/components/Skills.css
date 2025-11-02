@@ -1,0 +1,128 @@
+.skills {
+  padding: 120px 20px;
+  background: var(--dark-secondary);
+}
+
+.skills-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.skill-category {
+  background: var(--dark-bg);
+  padding: 40px;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+  transform: translateY(-5px);
+}
+
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(99, 102, 241, 0.2);
+}
+
+.category-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.category-header h3 {
+  font-size: 1.8rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.skill-item {
+  width: 100%;
+}
+
+.skill-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.skill-icon {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  min-width: 24px;
+}
+
+.skill-name {
+  flex: 1;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.skill-level {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  min-width: 45px;
+  text-align: right;
+}
+
+.skill-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--dark-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-progress {
+  height: 100%;
+  background: var(--gradient);
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(99, 102, 241, 0.5);
+  transition: width 1s ease;
+}
+
+@media (max-width: 968px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .skill-category {
+    padding: 30px 25px;
+  }
+}
+
+@media (max-width: 640px) {
+  .category-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .skill-name {
+    font-size: 0.9rem;
+  }
+}
+
