@@ -3,6 +3,9 @@ import { motion } from 'framer-motion'
 import { FaCode, FaPalette, FaHeart, FaUsers, FaLightbulb, FaRocket } from 'react-icons/fa'
 import './About.css'
 
+// Import de ta photo (dans le même dossier)
+import MOI from './MOI.PNG'
+
 const About = () => {
   const softSkills = [
     { icon: <FaHeart />, title: 'Passion', desc: 'Amour du code et du design' },
@@ -35,21 +38,24 @@ const About = () => {
         </motion.h2>
 
         <div className="about-content">
+          {/* === PHOTO === */}
           <motion.div
             className="about-image-wrapper"
             {...fadeInUp}
           >
             <div className="about-image-frame">
               <div className="about-image">
-                {/* Placeholder pour votre photo - remplacez par votre image */}
-                <div className="image-placeholder">
-                  <span>Photo Professionnelle</span>
-                </div>
+                <img
+                  src={MOI}
+                  alt="Djiby Ndiaye - Développeur Full-Stack & Designer UI/UX"
+                  className="profile-photo"
+                />
               </div>
               <div className="image-decoration"></div>
             </div>
           </motion.div>
 
+          {/* === TEXTE === */}
           <div className="about-text">
             <motion.div
               className="about-section"
@@ -136,4 +142,3 @@ const About = () => {
 }
 
 export default About
-
