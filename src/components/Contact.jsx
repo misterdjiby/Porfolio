@@ -10,6 +10,7 @@ import {
 } from 'react-icons/fa'
 import { HiDownload } from 'react-icons/hi'
 import './Contact.css'
+import CV from './CV.pdf'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -46,9 +47,11 @@ const Contact = () => {
   const handleDownloadCV = () => {
     // Placeholder - remplacez par le chemin réel de votre CV
     const link = document.createElement('a')
-    link.href = '/cv.pdf'
-    link.download = 'CV.pdf'
+    link.href = CV
+    link.download = 'Djiby-Ndiaye-CV.pdf'  // Nom du fichier téléchargé
+    document.body.appendChild(link)
     link.click()
+    document.body.removeChild(link)
   }
 
   const socialLinks = [

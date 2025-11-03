@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { HiDownload, HiChevronDown } from 'react-icons/hi'
 import './Header.css'
+import CV from './CV.pdf'
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -24,9 +25,11 @@ const Header = () => {
   const handleDownloadCV = () => {
     // Placeholder - vous pouvez ajouter le lien vers votre CV
     const link = document.createElement('a')
-    link.href = '/cv.pdf' // Remplacez par le chemin de votre CV
-    link.download = 'CV.pdf'
+    link.href = CV
+    link.download = 'Djiby-Ndiaye-CV.pdf'  // Nom du fichier téléchargé
+    document.body.appendChild(link)
     link.click()
+    document.body.removeChild(link)
   }
 
   return (
